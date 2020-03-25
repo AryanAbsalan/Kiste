@@ -1,0 +1,59 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+// *************struct der kiste****************
+struct kiste
+{
+    int kisteId;
+    double kisteBreite;
+    double kisteLaenge;
+    double kisteHoehe;
+    double kisteVolume;
+};
+
+int main()
+{
+   	struct kiste myKiste[3];
+  	int i;
+
+	for(i=0; i<3; i++)
+	{                   	
+		cout << "Kiste " << i + 1 << "\n";
+		myKiste[i].kisteId = i + 1000 ;
+		
+		cout << "\t bitte geben Sie die Breite der kiste ein: ";
+		cin >> myKiste[i].kisteBreite  ; 
+		
+		cout << "\t bitte geben Sie die Länge der kiste ein: ";
+		cin >> myKiste[i].kisteLaenge  ;
+		
+		cout << "\t bitte geben Sie die Höhe der kiste ein: ";
+		cin >> myKiste[i].kisteHoehe  ;
+		
+		cout << "\t bitte geben Sie das Volum der kiste ein: ";
+		cin >> myKiste[i].kisteVolume  ;
+	
+	}
+
+	for(i=0; i<3; i++)
+	{						
+		cout << "Kiste " << i + 1 << "\n";
+		cout << "\t Identification der kiste : " << myKiste[i].kisteId << "\n";
+		cout << "\t Breite der kiste : " << myKiste[i].kisteBreite << "\n";
+		cout << "\t Länge der kiste : " << myKiste[i].kisteLaenge << "\n";
+		cout << "\t Höhe der kiste : " << myKiste[i].kisteHoehe << "\n";
+		cout << "\t Volum der kiste : " << myKiste[i].kisteVolume << "\n";
+	
+	}
+
+    return 0;
+}
